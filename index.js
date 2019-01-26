@@ -76,7 +76,7 @@ function multi_report(group_id, msg_txt){
 
 var bot = linebot({
   channelId: '你的頻道ID',
-  channelSecret: '你的祕密',
+  channelSecret: '你的祕鑰',
   channelAccessToken: '你的存取代碼'
 });
 
