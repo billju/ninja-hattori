@@ -181,6 +181,7 @@ bot.on('message', function(event) {
 });
 
 const app = express();
+app.use('/images',express.static(__dirname+'/images'));
 const linebotParser = bot.parser();
 app.post('/', linebotParser);
 
