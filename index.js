@@ -1,8 +1,6 @@
 const linebot = require('linebot');
 const express = require('express');
-const mongoose = require('mongoose');
 const linebotParser = require('./bot.event')
-const report_handler = require('./report_handler');
 
 // Connect to MongoDB
 mongoose
