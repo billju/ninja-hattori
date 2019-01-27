@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "fs": "0.0.1-security",
-    "linebot": "^1.4.1"
+    "linebot": "^1.4.1",
+    "mongoose": "^5.4.6"
   }
 }

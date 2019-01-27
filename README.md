@@ -26,27 +26,22 @@
 ![](https://github.com/billju/ninja-hattori/blob/master/images/gitignore.png)
 8. 新增index.js作為主程式，設定驗證資料，其餘內容完全可以客製化
 ![](https://github.com/billju/ninja-hattori/blob/master/images/index-js.png)
-9. 設定班兵回報資料都存在report_status.json裡面，以回報第一員的作為標準自動設定成員名單(預設一班十六人)
-![](https://github.com/billju/ninja-hattori/blob/master/images/report-status.png)
-10. 接著到Heroku的deploy頁面，按照Deploy using Heroku Git的說明上傳檔案到平台
+9. 接著到Heroku的deploy頁面，按照Deploy using Heroku Git的說明上傳檔案到平台
 ![](https://github.com/billju/ninja-hattori/blob/master/images/git-heroku.png)
 
-### 使用方法
-1. 輸入回報內容，重複輸入可以蓋掉前一個人的內容
-2. 輸入「你逆」呼叫忍者哈特利回報現況
-3. 輸入「重新回報」或是忍者哈特利說「在下已完成彙整 你逆」，就會清空所有資料
-4. 這是忍術你逆術的帳號QRCode，開啟LINE掃描條碼即可加入
-![](https://github.com/billju/ninja-hattori/blob/master/images/qr-code.png)
-
 ### 哈特利自介
-在下乃忍者哈特利是也，來幫各位彙整回報內容
+在下乃忍者哈特利是也\n來幫各位彙整回報內容
 1. 輸入重複輸入可以蓋掉前一個人的內容
 2. 輸入「你逆」呼叫在下回報現況
-3. 出問題時請用指令「重新回報」
-4. 在下說「在下已完成彙整 你逆」就會清空資料
-5. 彙整到一半的資料在下也能處理
+3. 指令「重新回報」清空所有回報內容
+4. 指令「重新建立名單」清空成員名單
+5. 指令「help」「助け」「哈特利」呼叫說明
+6. 在下說「在下已完成彙整 你逆」就會清空資料
+7. 請輸入「建立名單001到018」開始
+8. 這是忍術你逆術的帳號QRCode，開啟LINE掃描條碼即可加入
+![](https://github.com/billju/ninja-hattori/blob/master/images/qr-code.png)
 
 ### 哈特利新發現
 1. 將對話內容暫存於陣列之中，以陣列順序建立索引，會有伺服器重啟後洗掉暫存的問題
 2. 建立文件系統，儲存成json檔案，改以物件名稱進行索引，每個關鍵對話都會寫入json檔，避免因Heroku為了保存免費使用時數(連續三十分鐘沒使用)進入休眠洗掉暫存
-3. 新增一個對話多個紀錄的函數(multi-report)，能夠判斷內容中各個使用者的名稱(號碼)；除此之外發現班兵很愛亂打空行，所以新增了空白字串行的過濾器
+3. 發現班兵很愛亂打空行或是空格，比如'  087在家'，覺得頭痛所以新增了空白字串行的過濾器
