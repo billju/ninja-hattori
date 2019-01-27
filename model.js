@@ -32,7 +32,8 @@ module.exports = User;
 // create
 function create_(data_obj){
     var newUser = new User(data_obj);
-    new.save().catch(err=>console.log(err));
+    newUser.save().catch(err=>console.log(err));
+    // User.insertMany([{},{},{}]).exec();
 }
 // read
 function read_(data_obj){
