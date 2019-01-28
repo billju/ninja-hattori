@@ -12,7 +12,9 @@ var intro_txt =
   '7. 請輸入「建立名單001到018」開始';
 
 bot.on('join', function (event) {
-    event.reply(intro_txt);
+  if(event.source.groupId){
+    event.reply(intro_txt+"\n順帶一提，群組ID為"+event.source.groupId);
+  }
 });
   
 bot.on('message', function(event) {
