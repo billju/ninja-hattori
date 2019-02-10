@@ -5,7 +5,7 @@ const linebotParser = require('./bot.event')
 // Connect to MongoDB
 mongoose
   .connect(
-    'mongodb://ninja:hattori666@ds113495.mlab.com:13495/ninja-hattori',
+    'mongodb://使用者帳號:密碼@ds113495.mlab.com:13495/ninja-hattori',
     { useNewUrlParser: true }
   )
   .then(() => console.log('MongoDB Connected'))
