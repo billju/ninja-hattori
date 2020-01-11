@@ -14,8 +14,9 @@
 2. 建立一個provider，等同於專案的管理群組，接著再建立一個channel，也就是機器人的帳號
 ![](https://github.com/billju/ninja-hattori/blob/master/images/message-provider.png)
 3. 進入到channel之後就可以設定機器人的大頭貼和自我介紹，同時這個頁面還包括Webhook(應用程式連結)所需要的驗證資料channelId、channelSecret、channelAccessToken(需點選issue發行驗證碼)，記得要設定webhook對應網址並且開啟開關
-![](https://github.com/billju/ninja-hattori/blob/master/images/webhook-setup.png)
+
 ![](https://github.com/billju/ninja-hattori/blob/master/images/line-channel.png)
+![](https://github.com/billju/ninja-hattori/blob/master/images/webhook-setup.png)
 4. 申請Heroku(網頁應用平台)帳號，下載Heroku CLI(command line interface)、git(版本控制軟體)，並且創建一個新app，上面會有settings的選項，打開後會有Config Vars，要在這裡輸入從line developer網頁取得的channelSecret、channelAccessToken
 ![](https://github.com/billju/ninja-hattori/blob/master/images/config-vars.png)
 5. 下載[node.js](https://nodejs.org/en/)，開啟終端機(windows叫做命令提示字元)，輸入`npm --version`查看安裝版本
